@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.Views.Dashboard"
+             NavigationPage.HasNavigationBar="false"
+             BackgroundImageSource="@drawable/dashboardbg">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button 
+                            Margin="0,70,10,0"
+                            Text="Logout"
+                            FontSize = "15"
+                            HorizontalOptions="End"
+                            CornerRadius="50"
+                            BorderWidth="1.5"
+                            BorderColor="#ffbc2f"
+                            BackgroundColor="White"
+                            Clicked="LogoutButtonClicked"
+                            FontFamily="Asap"
+                            HeightRequest="40"/>
+            <StackLayout>
+            <!--<ImageButton
+                            Padding="0,100,50,0"
+                            Source="@drawable/logout"
+                            HorizontalOptions="End"
+                            Clicked="LogoutButtonClicked"
+                            BackgroundColor="White"
+                            HeightRequest="200"></ImageButton>-->
+            </StackLayout>
+            <StackLayout>
+                            <Label 
+                                   Margin="0,100,0,20"
+                                   Text="Hello, Peter!"
+                                   TextColor="#363f47"
+                                   FontFamily="Asap"
+                                   HorizontalOptions="CenterAndExpand"
+                                   FontSize="50"></Label>   
+            </StackLayout>
+            <StackLayout>
+                        <Image Source="@drawable/image"
+                               HeightRequest="150"
+                               Aspect="AspectFit"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
