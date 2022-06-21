@@ -1,37 +1,60 @@
-﻿using MyApp.Views;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
-using System.Windows.Input;
+﻿using System.Text.RegularExpressions;
 using Xamarin.Forms;
+using MyApp.Views;
 
 namespace MyApp.ViewModels
 {
-    public class LoginPageViewModel : INotifyPropertyChanged
+    public class LoginPageViewModel 
     {
-        public string Email;
-        public string Password;
-        LoginPage loginPage;
-        public string Title;
-        public LoginPageViewModel(LoginPage loginpage)
+        private string email;
+        private string password;
+        public LoginPageViewModel()
         {
-            Email = "akosipeter@traxiontech.net";
-            Password = "W3lc0m3!";
-            this.loginPage = loginpage;
+            LoginButtonClicked = new Command(Login);
         }
-        #region INotifyPropertyChanged implementation
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
+        
+        public string Email { get { return email; } set { email = value; } }
+        public string Password { get { return password; } set { password = value; } }
+
+        public Command LoginButtonClicked { get; }
+
+        private async void Login()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            if (!string.IsNullOrWhiteSpace(email))
+            {
+                if (Regex.IsMatch(email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase))
+                {
+
+                    if (email == "akosipeter@traxiontech.net" && password == "W3lc0m3!")
+                    {
+                        await Application.Current.MainPage.Navigation.PushAsync(new DashboardView());
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Oops", "Your username or password is wrong", "OK");
+                        //Email.Text = string.Empty;
+                        //Password.Text = string.Empty;
+                    }
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Oops", "Not a valid email account", "OK");
+                    //Email.Text = string.Empty;
+                    //Password.Text = string.Empty;
+                }
+            }
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert("Oops", "Please input a value", "OK");
+                //Email.Text = string.Empty;
+                //Password.Text = string.Empty;
+            }
+
         }
-        #endregion
-
-        
 
 
-        
+
+
 
     }
 

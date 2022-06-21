@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.Views.LoginPage"
+             x:Class="MyApp.Views.LoginPageView"
              NavigationPage.HasNavigationBar="false"
              BackgroundImageSource="@drawable/loginbg">
     <ContentPage.Content>
@@ -28,7 +28,8 @@
                                Placeholder="Email Address" 
                                HorizontalOptions="FillAndExpand"
                                FontFamily="Asap"
-                               TextColor="#363f47"/>
+                               TextColor="#363f47"
+                               Text="{Binding Email}"/>
                     </StackLayout>
                     <StackLayout Padding="0,0,0,20">
                     <Entry x:Name="Password" 
@@ -36,7 +37,8 @@
                                HorizontalOptions="FillAndExpand" 
                                IsPassword="true"
                                FontFamily="Asap"
-                               TextColor="#363f47"/>
+                               TextColor="#363f47"
+                               Text="{Binding Password}"/>
                     </StackLayout>
                     <StackLayout >
                     <Button Text="Login"
@@ -46,7 +48,7 @@
                             BorderWidth="1.5"
                             BorderColor="#ffbc2f"
                             BackgroundColor="White"
-                            Clicked="LoginButtonClicked"
+                            Command="{Binding LoginButtonClicked}"
                             FontFamily="Asap"
                             TextColor="#363f47"/>
                     </StackLayout>

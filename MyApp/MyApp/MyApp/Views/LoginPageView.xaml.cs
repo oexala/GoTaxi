@@ -6,23 +6,26 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MyApp.Views;
+using MyApp.ViewModels;
+using System.Text.RegularExpressions;
+using MyApp.Utils;
 
 namespace MyApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Dashboard : ContentPage
+    public partial class LoginPageView : ContentPage
     {
-        public Dashboard()
+
+        public LoginPageView()
         {
             InitializeComponent();
+            BindingContext = new LoginPageViewModel();
+   
         }
-        public async void LogoutButtonClicked(object sender, EventArgs e)
-        {
 
-            await Navigation.PushAsync(new LoginPage());
+        
 
-        }
+
     }
-
-    
 }

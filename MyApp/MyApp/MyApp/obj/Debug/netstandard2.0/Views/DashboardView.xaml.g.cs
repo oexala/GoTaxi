@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("MyApp.Views.Dashboard.xaml", "Views/Dashboard.xaml", typeof(global::MyApp.Views.Dashboard))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("MyApp.Views.DashboardView.xaml", "Views/DashboardView.xaml", typeof(global::MyApp.Views.DashboardView))]
 
 namespace MyApp.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Dashboard.xaml")]
-    public partial class Dashboard : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\DashboardView.xaml")]
+    public partial class DashboardView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Dashboard));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(DashboardView));
         }
     }
 }

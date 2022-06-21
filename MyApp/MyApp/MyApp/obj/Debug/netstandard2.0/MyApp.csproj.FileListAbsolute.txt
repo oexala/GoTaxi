@@ -12,5 +12,5 @@ D:\vscodeprojects\repos\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\MyApp.dll
 D:\vscodeprojects\repos\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\refint\MyApp.dll
 D:\vscodeprojects\repos\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\MyApp.pdb
 D:\vscodeprojects\repos\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\ref\MyApp.dll
-D:\vscodeprojects\repos\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
-D:\vscodeprojects\repos\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\Views\Dashboard.xaml.g.cs
+D:\vscodeprojects\repos\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\Views\DashboardView.xaml.g.cs
+D:\vscodeprojects\repos\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\Views\LoginPageView.xaml.g.cs
